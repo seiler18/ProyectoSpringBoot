@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Sistema (ADMIN) de Compra y ventas</title>
+<!--CSS de Bootstrap 4.2.1-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+ <link rel="shortcut icon" type="image/png" img href="https://i.ibb.co/cLHCS2v/pngwing-com.png">
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+
+        <h4 class="hero-section text-light ">Sistema : Compra y Ventas</h4>
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link hero-section text-light" href="/admin">Home</a>
+            </li>
+
+               <li class="nav-item">
+              <a class="nav-link hero-section text-light" href="/admin/MantenedorClientes">Clientes</a>
+            </li>
+    <li class="nav-item">
+              <a class="nav-link hero-section text-light" href="/admin/MantenedorProductos">Productos</a>
+            </li>
+<li class="nav-item"><a
+						class="nav-link hero-section text-light"  th:href="@{/logout}">Cerrar sesión</a></li>
+				</ul>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    
+    
+<header class="pt-5 mt-5">
+<div class="container-fluid text-center">
+
+<section id="presentacion" class="container text-center">
+<h1></h1>
+ 
+</section>
+</div>
+</header>
+<br/>
+
+
+
+<div class="justify-content-center align-items-center">
+<center><legend><h1>PRODUCTOS EN VENTA</h1></legend>
+<br>
+<img src="https://i.ibb.co/jZHhCRn/kisspng-sales-force-management-system-business-distributio-sfa-5b1531a7753306-9388929215281156234801.png" style="width: 15%" >
+<br></br>
+<center>
+</center>
+<!-- <div class="container text-center"> -->
+<!-- <table class="table"> -->
+<!-- <thead class="thead-dark"> -->
+<!-- <tr> -->
+<!-- <th scope="col">CLIENTE(DUEÑO DEL PRODUCTO)</th> -->
+<!-- <th scope="col">NOMBRE</th> -->
+<!-- <th scope="col">PRECIO</th> -->
+<!-- <th scope="col">ACCIONES</th> -->
+<!-- </tr> -->
+<!-- </thead> -->
+<!-- <tbody> -->
+<!-- <tr> -->
+<!--  <td/><select id="Cliente" class="form-control"> -->
+<!--         <option selected>Cliente1  (test)</option> -->
+<!--         <option selected>Cliente2  (test)</option> -->
+<!--       </select> -->
+ 
+<!--  <td /><select id="Cliente" class="form-control"></select> -->
+<!--  <td /><select id="Cliente" Type="number" class="form-control"></select> -->
+<!--  <td><center> -->
+<!-- <button onclick="window.location.href='eliminar?idUsuario=${u.getId_usuario()}'">Eliminar</button></center></td> -->
+<!-- </tr> -->
+
+<!-- </tbody> -->
+<!-- </table> -->
+<!-- </div> -->
+<div id="divContainer text-center" class="class=">
+					<button id="btnBuscar" onclick="traer()">Obtener lista de
+						Ventas</button>
+				</div>
+				<div class="container text-center">
+
+
+					<br />
+					<table id="tbl" class="table">
+
+						<script type="text/javascript">
+var contenido = document.querySelector('#tblData')
+function traer(){
+	fetch('http://localhost:8082/venta')
+	.then(res=> res.json())
+	.then(datos=>{
+// 		console.log(datos)
+tabla(datos)
+		})
+}
+
+function tabla(datos){
+	
+console.log(datos)
+tblData.innerHTML=''
+for(let valor of datos){
+// 	console.log(valor.nombre)
+tblData.innerHTML +=`		
+<tr>
+	<td>${valor.id}</td>
+	<td>${valor.fecha}</td>
+	<td>${valor.cliente}</td>
+	<td>${valor.productos}</td>
+	<td>${valor.montoTotal}</td>
+	<td><center>
+			<button>Editar</button>
+			<button>Eliminar</button>
+		</center></td>
+</tr>`
+}
+}
+
+
+</script>
+						<thead class="thead-dark">
+							<tr>
+								<th scope="col">CLIENTE ID</th>
+								<th scope="col">FECHA DE VENTA</th>
+								<th scope="col">CLIENTE</th>
+								<th scope="col">PRODUCTOS</th>
+								<th scope="col">MONTO TOTAL</th>
+								<th scope="col">ACCIONES</th>
+							</tr>
+						</thead>
+						<tbody id="tblData">
+							<tr>
+								<td />
+								<td />
+								<td />
+								<td />
+								
+								<td><center>
+										<!-- 									<button -->
+										<!-- 										onclick="window.location.href='editarForm?id_usuario=${u.getId_usuario()}'">Editar</button> -->
+										<!-- 									<button -->
+										<!-- 										onclick="window.location.href='eliminar?idUsuario=${u.getId_usuario()}'">Eliminar</button> -->
+									</center></td>
+							</tr>
+
+						</tbody>
+					</table>
+
+				</div>
+
+				<!--Ajax y scripts-->
+				<link rel="stylesheet"
+					href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+				<link rel="stylesheet"
+					href="https://cdn.datatables.net/responsive/2.2.5/css/responsive.dataTables.min.css">
+				<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+				<script
+					src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+				<script
+					src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+				<script
+					src="https://cdn.datatables.net/responsive/2.2.5/js/dataTables.responsive.min.js"></script>
+				<script
+					src="https://cdn.datatables.net/responsive/2.2.5/js/responsive.bootstrap4.min.js"></script>
+				<!--Popper JS 1.14.3-->
+				<script
+					src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+					integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+					crossorigin="anonymous"></script>
+
+				<!--Bootstrap JS 4.2.1-->
+				<script
+					src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+					integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+					crossorigin="anonymous"></script>
+</body>
+</html>

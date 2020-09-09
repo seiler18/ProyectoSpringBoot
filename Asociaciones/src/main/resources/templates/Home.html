@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Sistema Arriendo de Peliculas</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+
+        <h1 class="hero-section text-light ">Sistema Arriendo de Peliculas</h1>
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link hero-section text-light" href="/SistemaArriendo">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hero-section text-light" href="/arriendos">Arriendos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hero-section text-light" href="/clientes">Clientes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hero-section text-light" href="/peliculas">Peliculas</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+<header class="pt-5 mt-5">
+<div class="container-fluid">
+<div class="col-sm-2">
+</div>
+<div class="col-sm-8">
+<h3>Detalle</h3>
+<table class="table">
+<thead class="thead-light">
+<tr>
+<th scope="col">Identificador</th>
+<th scope="col">Inicio</th>
+<th scope="col">Duracion</th>
+<th scope="col">Pelicula</th>
+<th scope="col">Cliente</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each="arriendo: ${arriendos}">
+<td th:text="${arriendo.id}"/>
+<td th:text="${arriendo.inicio}"/>
+<td th:text="${arriendo.duracion}"/>
+<td th:text="${arriendo.pelicula.titulo}"/>
+<td th:text="${arriendo.cliente.nombre}"/>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-sm-2">
+<p></p>
+</div>
+</div>
+</header>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

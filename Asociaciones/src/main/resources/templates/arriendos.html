@@ -1,0 +1,94 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Sistema Arriendo de peli</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+
+        <h1 class="hero-section text-light ">Sistema Arriendo de Peliculas</h1>
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link hero-section text-light" href="/SistemaArriendo">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hero-section text-light" href="/arriendos">Arriendos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hero-section text-light" href="/clientes">Clientes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hero-section text-light" href="/peliculas">Peliculas</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+<header class="pt-5 mt-5">
+<div class="container-fluid">
+<div class="col-sm-2">
+</div>
+<div class="col-sm-8">
+<h3>Arriendos</h3>
+<form th:action="@{/arriendos/agregar}" method="post"
+th:object="${arriendo}">
+<div class="form-group row">
+<label for="inicio" class="col-4">Inicio</label>
+<div class="col-8">
+<input class="form-control" type="date"
+data-date-format="mm-dd-yyyy" id="inicio" name="inicio">
+</div>
+</div>
+<div class="form-group row">
+<label for="duracion" class="col-4">Duración</label>
+<div class="col-8">
+<input class="form-control" type="number" value=""
+id="duracion" name="duracion">
+</div>
+</div>
+<div class="form-group row">
+<label class="col-4">Pelicula</label>
+<div class="col-8">
+<select th:field="*{pelicula}">
+<option th:each="pelicula : ${peliculas}"
+th:value="${pelicula.id}" th:text="${pelicula.titulo}"></option>
+</select>
+</div>
+</div>
+<div class="form-group row">
+<label class="col-4">Cliente</label>
+<div class="col-8">
+<select th:field="*{cliente}">
+<option th:each="cliente : ${clientes}"
+th:value="${cliente.id}" th:text="${cliente.nombre}"></option>
+</select>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-sm-12">
+<button type="submit" class="btn
+btn-primary">Agregar</button>
+</div>
+</div>
+</form>
+</div>
+<div class="col-sm-2">
+<p></p>
+</div>
+</div></header>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

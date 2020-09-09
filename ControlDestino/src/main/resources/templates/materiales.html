@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Sistema de Bodega</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<div class="container-fluid">
+
+			<h2 class="hero-section text-light ">Sistema Bodega de
+				Materiales</h2>
+
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarNav" aria-controls="navbarNav"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a
+						class="nav-link hero-section text-light" href="/">Home</a>
+					</li>
+					<li class="nav-item"><a
+						class="nav-link hero-section text-light" href="/materiales">Materiales</a>
+					</li>
+					<li class="nav-item"><a
+						class="nav-link hero-section text-light" href="/listarBodegas">Bodegas</a>
+					</li>
+					<li class="nav-item"><a
+						class="nav-link hero-section text-light"  th:href="@{/logout}">Cerrar sesión</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="title">
+		<h1>Registrar Materiales</h1>
+	</div>
+
+	<div class="container1">
+		<div class="col-sm" id="loginform">
+			<div class="px-4 py-3">
+				<article class="card-body">
+					<form th:action="@{/materiales/agregar}" method="post"
+						th:object="${materiales}">
+						<div class="form-row">
+							<div class="col form-group">
+								<label>Nombre del Material</label> <input class="form-control"
+									type="text" id="nombre" name="nombre">
+							</div>
+							<!-- form-group end.// -->
+						</div>
+						<!-- form-row end.// -->
+						<div class="form-row">
+							<div class="col form-group">
+								<label>Precio</label> <input class="form-control" type="number"
+									id="precio" name="precio">
+							</div>
+							<!-- form-group end.// -->
+						</div>
+						<!-- form-row end.// -->
+						<div class="form-row">
+
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label>Nombre de Bodega</label>
+								</div>
+								<div class="col-md-6">
+									<select th:object="${bodegas}">
+										<option th:each="bodega : ${bodegas}" th:value="${bodega.id}"
+											th:text="${bodega.nombre}"></option>
+									</select>
+								</div>
+								<!-- form-group end.// -->
+							</div>
+						</div>
+						<!-- form-row end.// -->
+
+						<div class="form-row">
+							<div class="form-group">
+								<label>Fecha de Ingreso</label> 
+								<input id="fecha" format="dd-mm-yyyy" name="fecha" width="100%"/>
+							</div>
+							<!-- form-group end.// -->
+						</div>
+
+						<div class="form-group">
+							<button type="submit" class="btn btn-dark btn-block">
+								Registrar datos</button>
+						</div>
+						<!-- form-group// -->
+					</form>
+				</article>
+				<!-- card-body end .// -->
+			</div>
+		</div>
+	</div>
+
+	<div class="table">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th scope="col">Precio</th>
+					<th scope="col">Nombre</th>
+					<th scope="col">Bodega</th>
+					<th scope="col">Fecha Ingreso</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="material: ${materiales}">
+					<td th:text="${material.precio}" />
+					<td th:text="${material.nombre}" />
+<td th:object="${bodegas}">
+<option th:each="bodega : ${bodegas}" th:value="${bodega.id}"
+											th:text="${bodega.nombre}"></option>
+					<td th:text="${material.fecha}" />
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<script>
+		$('#fecha').datepicker({
+			uiLibrary : 'bootstrap4'
+		});
+	</script>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

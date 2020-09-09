@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Iniciar Sesión</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+ <link rel="shortcut icon" type="image/png" img href="https://i.ibb.co/cLHCS2v/pngwing-com.png">
+</head>
+<body>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+
+        <h1 class="hero-section text-light ">Sistema : Compra Venta</h1>
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        </div>
+        </nav>
+ <header class="pt-4 mt-4">     
+<div class="row justify-content-center align-items-center">
+<div class="col-sm-4 text-center">
+<br/>
+<img src="https://i.ibb.co/jZHhCRn/kisspng-sales-force-management-system-business-distributio-sfa-5b1531a7753306-9388929215281156234801.png" width="300" height="300" >
+<form th:action="@{/login}" method="post"
+class="form-signin">
+<input type="text" id="usuario" name="usuario"
+th:placeholder="Usuario" class="form-control"/> <br/>
+<input type="password" th:placeholder="Password"
+id="password" name="password" class="form-control"/> <br/>
+<div align="center" th:if="${param.error}">
+<p style="font-size: 20; color: #FF1C19;">Ingresa un Usuario y/o Contraseña valida</p>
+</div>
+<button class="btn btn-lg btn-dark btn-block"
+name="Submit" value="Login" type="Submit" th:text="Ingresar"></button>
+</form>
+</div>
+</div>
+</header>       
+        
+        
+        
+        
+        
+    <!--Ajax-->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  
+    <!--jQuery 3.3.1 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!--Popper JS 1.14.3-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+    <!--Bootstrap JS 4.2.1-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js"
+	type="text/javascript"></script>
+<link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css"
+	rel="stylesheet" type="text/css" />
+
+<!-- Add icon library -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<title>Materiales</title>
+
+<style>
+html, body {
+	background-color: #fff;
+	height: 100%;
+}
+
+.title {
+	text-align: center;
+	margin: 50px 0 50px 0;
+}
+
+.table {
+	width: 70%;
+	margin: auto;
+}
+
+.table .noborder {
+	width: 20px;
+	text-align: center;
+}
+
+.container1 {
+	margin: auto;
+	width: 30%;
+}
+
+.container1 #loginform {
+	color: #000;
+	border-radius: 10px;
+	margin-top: -40px;
+}
+</style>
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-light" style="background-color: #0c0c0c">
+		<a class="navbar-brand font-weight-bolder text-white" href="#">Materiales</a>
+		<button class="navbar-toggler" style="background-color: white"
+			type="button" data-toggle="collapse" data-target="#navbarText"
+			aria-controls="navbarText" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarText">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link text-white"
+					href="/">Bodega <span class="sr-only">(current)</span></a></li>
+				<li class="nav-item active"><a class="nav-link text-white"
+					href="/materiales">Materiales <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item"><a class="nav-link text-white"
+					th:href="@{/logout}">Cerrar sesión</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="title">
+		<h1>Registrar Materiales</h1>
+	</div>
+
+	<div class="container1">
+		<div class="col-sm" id="loginform">
+			<div class="px-4 py-3">
+				<article class="card-body">
+					<form th:action="@{/materiales/agregar}" method="post"
+						th:object="${material}">
+						<div class="form-row">
+							<div class="col form-group">
+								<label>Nombre del Material</label> <input class="form-control"
+									type="text" id="nombre" name="nombre">
+							</div>
+							<!-- form-group end.// -->
+						</div>
+						<!-- form-row end.// -->
+						<div class="form-row">
+							<div class="col form-group">
+								<label>Precio</label> <input class="form-control" type="number"
+									id="precio" name="precio">
+							</div>
+							<!-- form-group end.// -->
+						</div>
+						<!-- form-row end.// -->
+						<div class="form-row">
+
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label>Nombre de Bodega</label>
+								</div>
+								<div class="col-md-6">
+									<select th:field="*{bodega}">
+										<option th:each="bodega : ${bodegas}" th:value="${bodega.id}"
+											th:text="${bodega.nombre}"></option>
+									</select>
+								</div>
+								<!-- form-group end.// -->
+							</div>
+						</div>
+						<!-- form-row end.// -->
+
+						<div class="form-row">
+							<div class="form-group">
+								<label>Fecha de Ingreso</label> 
+								<input id="fecha" format="dd-mm-yyyy" name="fecha" width="100%"/>
+							</div>
+							<!-- form-group end.// -->
+						</div>
+
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary btn-block">
+								Registrar datos</button>
+						</div>
+						<!-- form-group// -->
+					</form>
+				</article>
+				<!-- card-body end .// -->
+			</div>
+		</div>
+	</div>
+
+	<div class="table">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th scope="col">Precio</th>
+					<th scope="col">Nombre</th>
+					<th scope="col">Bodega</th>
+					<th scope="col">Fecha Ingreso</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="material: ${materiales}">
+					<td th:text="${material.precio}" />
+					<td th:text="${material.nombre}" />
+					<td th:text="${material.bodega.nombre}" />
+					<td th:text="${material.fecha}" />
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<script>
+		$('#fecha').datepicker({
+			uiLibrary : 'bootstrap4'
+		});
+	</script>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

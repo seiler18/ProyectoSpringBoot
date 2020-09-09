@@ -1,0 +1,51 @@
+2020-07-20 21:39:18.413  INFO 2232 --- [main] c.d.d.DesafioNoticiaApplication          : Starting DesafioNoticiaApplication on NI7003 with PID 2232 (C:\Users\NTB7005\Desktop\Jesus Ejercicio\AIEP\GRUPO2\JS\DesafioNoticia\target\classes started by NTB7005 in C:\Users\NTB7005\Desktop\Jesus Ejercicio\AIEP\GRUPO2\JS\DesafioNoticia)
+2020-07-20 21:39:18.425  INFO 2232 --- [main] c.d.d.DesafioNoticiaApplication          : No active profile set, falling back to default profiles: default
+2020-07-20 21:39:19.431  INFO 2232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-07-20 21:39:19.443  INFO 2232 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-20 21:39:19.443  INFO 2232 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-20 21:39:19.522  INFO 2232 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-20 21:39:19.523  INFO 2232 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1015 ms
+2020-07-20 21:39:19.714  INFO 2232 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-20 21:39:19.725 DEBUG 2232 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-07-20 21:39:19.778 DEBUG 2232 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2020-07-20 21:39:19.782  INFO 2232 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-20 21:39:19.802 DEBUG 2232 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-07-20 21:39:19.811 DEBUG 2232 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-07-20 21:39:19.923  INFO 2232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2020-07-20 21:39:19.927  INFO 2232 --- [main] c.d.d.DesafioNoticiaApplication          : Started DesafioNoticiaApplication in 1.976 seconds (JVM running for 5.358)
+2020-07-20 21:39:25.600  INFO 2232 --- [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-07-20 21:39:25.603  INFO 2232 --- [RMI TCP Connection(6)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-20 21:39:31.566  INFO 11400 --- [main] c.d.d.DesafioNoticiaApplication          : Starting DesafioNoticiaApplication on NI7003 with PID 11400 (C:\Users\NTB7005\Desktop\Jesus Ejercicio\AIEP\GRUPO2\JS\DesafioNoticia\target\classes started by NTB7005 in C:\Users\NTB7005\Desktop\Jesus Ejercicio\AIEP\GRUPO2\JS\DesafioNoticia)
+2020-07-20 21:39:31.570  INFO 11400 --- [main] c.d.d.DesafioNoticiaApplication          : No active profile set, falling back to default profiles: default
+2020-07-20 21:39:32.327  INFO 11400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-07-20 21:39:32.335  INFO 11400 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-20 21:39:32.336  INFO 11400 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-20 21:39:32.399  INFO 11400 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-20 21:39:32.399  INFO 11400 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 792 ms
+2020-07-20 21:39:32.548  INFO 11400 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-20 21:39:32.559 DEBUG 11400 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-07-20 21:39:32.602 DEBUG 11400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2020-07-20 21:39:32.606  INFO 11400 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-20 21:39:32.622 DEBUG 11400 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-07-20 21:39:32.629 DEBUG 11400 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-07-20 21:39:32.723  INFO 11400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2020-07-20 21:39:32.726  INFO 11400 --- [main] c.d.d.DesafioNoticiaApplication          : Started DesafioNoticiaApplication in 1.492 seconds (JVM running for 2.233)
+2020-07-20 21:40:44.456  INFO 11400 --- [RMI TCP Connection(9)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-07-20 21:40:44.460  INFO 11400 --- [RMI TCP Connection(9)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-20 21:57:26.352  INFO 14356 --- [main] c.d.d.DesafioNoticiaApplication          : Starting DesafioNoticiaApplication on NI7003 with PID 14356 (C:\Users\NTB7005\Desktop\Jesus Ejercicio\AIEP\GRUPO2\JS\DesafioNoticia\target\classes started by NTB7005 in C:\Users\NTB7005\Desktop\Jesus Ejercicio\AIEP\GRUPO2\JS\DesafioNoticia)
+2020-07-20 21:57:26.355  INFO 14356 --- [main] c.d.d.DesafioNoticiaApplication          : No active profile set, falling back to default profiles: default
+2020-07-20 21:57:27.213  INFO 14356 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-07-20 21:57:27.221  INFO 14356 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-20 21:57:27.222  INFO 14356 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-20 21:57:27.287  INFO 14356 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-20 21:57:27.287  INFO 14356 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 863 ms
+2020-07-20 21:57:27.439  INFO 14356 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-20 21:57:27.452 DEBUG 14356 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-07-20 21:57:27.496 DEBUG 14356 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2020-07-20 21:57:27.500  INFO 14356 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-20 21:57:27.518 DEBUG 14356 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-07-20 21:57:27.525 DEBUG 14356 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-07-20 21:57:27.625  INFO 14356 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2020-07-20 21:57:27.628  INFO 14356 --- [main] c.d.d.DesafioNoticiaApplication          : Started DesafioNoticiaApplication in 1.608 seconds (JVM running for 2.365)
+2020-07-20 22:03:01.661  INFO 14356 --- [RMI TCP Connection(16)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-07-20 22:03:01.664  INFO 14356 --- [RMI TCP Connection(16)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

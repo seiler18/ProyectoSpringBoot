@@ -1,0 +1,50 @@
+2020-07-15 20:54:23.109  INFO 984 --- [main] c.d.demospring.DemospringApplication     : Starting DemospringApplication on NI7003 with PID 984 (C:\Users\NTB7005\Desktop\Jesus Ejercicio\AIEP\GRUPO2\JS\Demospring\target\classes started by NTB7005 in C:\Users\NTB7005\Desktop\Jesus Ejercicio\AIEP\GRUPO2\JS\Demospring)
+2020-07-15 20:54:23.113  INFO 984 --- [main] c.d.demospring.DemospringApplication     : No active profile set, falling back to default profiles: default
+2020-07-15 20:54:23.874  INFO 984 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9080 (http)
+2020-07-15 20:54:23.882  INFO 984 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-15 20:54:23.883  INFO 984 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-15 20:54:23.944  INFO 984 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-15 20:54:23.944  INFO 984 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 797 ms
+2020-07-15 20:54:24.082  INFO 984 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-15 20:54:24.090 DEBUG 984 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-07-15 20:54:24.129 DEBUG 984 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2020-07-15 20:54:24.148 DEBUG 984 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-07-15 20:54:24.154 DEBUG 984 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-07-15 20:54:24.238  INFO 984 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9080 (http) with context path ''
+2020-07-15 20:54:24.241  INFO 984 --- [main] c.d.demospring.DemospringApplication     : Started DemospringApplication in 1.442 seconds (JVM running for 2.16)
+2020-07-15 20:56:39.711  INFO 984 --- [RMI TCP Connection(12)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-07-15 20:56:39.714  INFO 984 --- [RMI TCP Connection(12)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-15 20:56:46.626 DEBUG 5948 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-07-15 20:56:46.670 DEBUG 5948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2020-07-15 20:56:46.689 DEBUG 5948 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-07-15 20:56:46.695 DEBUG 5948 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-07-15 20:57:28.418  INFO 15592 --- [main] c.d.demospring.DemospringApplication     : Starting DemospringApplication on NI7003 with PID 15592 (C:\Users\NTB7005\Desktop\Jesus Ejercicio\AIEP\GRUPO2\JS\Demospring\target\classes started by NTB7005 in C:\Users\NTB7005\Desktop\Jesus Ejercicio\AIEP\GRUPO2\JS\Demospring)
+2020-07-15 20:57:28.421  INFO 15592 --- [main] c.d.demospring.DemospringApplication     : No active profile set, falling back to default profiles: default
+2020-07-15 20:57:29.143  INFO 15592 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9080 (http)
+2020-07-15 20:57:29.151  INFO 15592 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-15 20:57:29.152  INFO 15592 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-15 20:57:29.221  INFO 15592 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-15 20:57:29.221  INFO 15592 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 761 ms
+2020-07-15 20:57:29.376  INFO 15592 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-15 20:57:29.384 DEBUG 15592 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-07-15 20:57:29.424 DEBUG 15592 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2020-07-15 20:57:29.442 DEBUG 15592 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-07-15 20:57:29.448 DEBUG 15592 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-07-15 20:57:29.532  INFO 15592 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9080 (http) with context path ''
+2020-07-15 20:57:29.535  INFO 15592 --- [main] c.d.demospring.DemospringApplication     : Started DemospringApplication in 1.433 seconds (JVM running for 2.154)
+2020-07-15 21:03:06.265  INFO 15592 --- [RMI TCP Connection(14)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-07-15 21:03:06.268  INFO 15592 --- [RMI TCP Connection(14)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-15 21:03:17.308  INFO 22352 --- [main] c.d.demospring.DemospringApplication     : Starting DemospringApplication on NI7003 with PID 22352 (C:\Users\NTB7005\Desktop\Jesus Ejercicio\AIEP\GRUPO2\JS\Demospring\target\classes started by NTB7005 in C:\Users\NTB7005\Desktop\Jesus Ejercicio\AIEP\GRUPO2\JS\Demospring)
+2020-07-15 21:03:17.311  INFO 22352 --- [main] c.d.demospring.DemospringApplication     : No active profile set, falling back to default profiles: default
+2020-07-15 21:03:18.040  INFO 22352 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9080 (http)
+2020-07-15 21:03:18.048  INFO 22352 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-15 21:03:18.048  INFO 22352 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-15 21:03:18.109  INFO 22352 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-15 21:03:18.109  INFO 22352 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 751 ms
+2020-07-15 21:03:18.244  INFO 22352 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-15 21:03:18.253 DEBUG 22352 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-07-15 21:03:18.291 DEBUG 22352 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2020-07-15 21:03:18.309 DEBUG 22352 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-07-15 21:03:18.315 DEBUG 22352 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-07-15 21:03:18.406  INFO 22352 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9080 (http) with context path ''
+2020-07-15 21:03:18.412  INFO 22352 --- [main] c.d.demospring.DemospringApplication     : Started DemospringApplication in 1.408 seconds (JVM running for 2.11)

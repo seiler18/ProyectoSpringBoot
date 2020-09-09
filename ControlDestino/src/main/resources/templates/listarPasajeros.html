@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Sistema : Pasajeros - Destinos - Bodega</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+
+        <h1 class="hero-section text-light ">Sistema : Pasajeros - Destinos - Bodega</h1>
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link hero-section text-light" href="/SistemaPasajero">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hero-section text-light" href="/destinos">Nuevo Destino</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hero-section text-light" href="/pasajeros">Nuevo Pasajero</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link hero-section text-light" href="/listarDestinos">Destinos</a>
+            </li>
+<li class="nav-item"><a
+						class="nav-link hero-section text-light"  th:href="@{/logout}">Cerrar sesión</a></li>
+				</ul>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<header class="pt-5 mt-5">
+<div class="col-sm-8">
+<h3>Pasajeros</h3>
+<table class="table">
+<thead class="thead-light">
+<tr>
+<th scope="col">Identificador</th>
+<th scope="col">RUT</th>
+<th scope="col">Nombre</th>
+<th scope="col">Apellido</th>
+<th scope="col">edad</th>
+<th scope="col">Ciudad Natal</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each="pasajero: ${pasajeros}">
+<td th:text="${pasajero.id}"/>
+<td th:text="${pasajero.rut}"/>
+<td th:text="${pasajero.nombre}"/>
+<td th:text="${pasajero.apellido}"/>
+<td th:text="${pasajero.edad}"/>
+<td th:text="${pasajero.ciudadNatal}"/>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-sm-2">
+<p>Pasajeros listados</p>
+</div>
+
+</header>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

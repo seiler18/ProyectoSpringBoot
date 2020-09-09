@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Iniciar Sesión</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+
+        <h1 class="hero-section text-light ">Sistema : Pasajeros - Destinos - Bodega</h1>
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        </div>
+        </nav>
+ <header class="pt-4 mt-4">     
+<div class="row justify-content-center align-items-center">
+<div class="col-sm-4 text-center">
+<br/>
+<img src="https://i.ibb.co/drr4V9K/pngegg.png" width="300" height="300">
+<form th:action="@{/login}" method="post"
+class="form-signin">
+<input type="text" id="usuario" name="usuario"
+th:placeholder="Usuario" class="form-control"/> <br/>
+<input type="password" th:placeholder="Password"
+id="password" name="password" class="form-control"/> <br/>
+<div align="center" th:if="${param.error}">
+<p style="font-size: 20; color: #FF1C19;">Ingresa un Usuario y/o Contraseña valida</p>
+</div>
+<button class="btn btn-lg btn-dark btn-block"
+name="Submit" value="Login" type="Submit" th:text="Ingresar"></button>
+</form>
+</div>
+</div>
+</header>       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+<!-- <section id="presentacion" class="container-fluid"> -->
+<!-- <header class="pt-5 mt-5 ">         -->
+<!-- <div class="container"> -->
+<!-- <div class="row"> -->
+<!-- <div class="col-sm-4"> -->
+<!-- </div> -->
+
+<!-- <h3 class="form-signin text-left" -->
+<!-- th:text="Credenciales"></h3> -->
+<!-- <br/> -->
+
+
+<!-- <div class="col-sm-4"> -->
+<!-- <form th:action="@{/login}" method="post" -->
+<!-- class="form-signin"> -->
+<!-- <input type="text" id="usuario" name="usuario" -->
+<!-- th:placeholder="Usuario" class="form-control"/> <br/> -->
+<!-- <input type="password" th:placeholder="Password" -->
+<!-- id="password" name="password" class="form-control"/> <br/> -->
+<!-- <div align="center" th:if="${param.error}"> -->
+<!-- <p style="font-size: 20; color: #FF1C19;">Verifica las -->
+<!-- credenciales.</p> -->
+<!-- </div> -->
+<!-- <button class="btn btn-lg btn-primary btn-block" -->
+<!-- name="Submit" value="Login" type="Submit" th:text="Login"></button> -->
+<!-- </form> -->
+<!-- </div> -->
+<!-- <div class="col-sm-4"></div> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- </header> -->
+<!-- </section> -->
+</body>
+</html>

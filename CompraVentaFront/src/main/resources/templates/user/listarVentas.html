@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Sistema (ADMIN) de Compra y ventas</title>
+<!--CSS de Bootstrap 4.2.1-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+ <link rel="shortcut icon" type="image/png" img href="https://i.ibb.co/cLHCS2v/pngwing-com.png">
+</head>
+<body onload="getProducto()">
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+
+        <h4 class="hero-section text-light ">Sistema : Compra y Ventas</h4>
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link hero-section text-light" href="/user">Home</a>
+            </li>
+<li class="nav-item"><a
+						class="nav-link hero-section text-light"  th:href="@{/logout}">Cerrar sesión</a></li>
+				</ul>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    
+    
+<header class="pt-5 mt-5">
+<div class="container-fluid text-center">
+
+<section id="presentacion" class="container text-center">
+<h1></h1>
+ 
+</section>
+</div>
+</header>
+<br/>
+
+
+
+<div class="justify-content-center align-items-center">
+<center><legend><h1>PRODUCTOS EN VENTA</h1></legend>
+<br>
+<img src="https://i.ibb.co/jZHhCRn/kisspng-sales-force-management-system-business-distributio-sfa-5b1531a7753306-9388929215281156234801.png" style="width: 15%" >
+<br></br>
+<center>
+</center>
+<div class="container text-center">
+<table class="table">
+<thead class="thead-dark">
+<tr>
+<th scope="col">CLIENTE(DUEÑO DEL PRODUCTO)</th>
+<th scope="col">NOMBRE</th>
+<th scope="col">PRECIO</th>
+<th scope="col">ACCIONES</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+ <td/><select id="productoCliente" class="form-control">
+      </select>
+ 
+ <td /><select id="productoNombre" class="form-control"></select>
+ <td /><select id="productoPrecio" Type="number" class="form-control"></select>
+ <td><center>
+<button onclick="getCliente()">Listar y Contactar Cliente</button></center></td>
+</tr>
+
+</tbody>
+</table>
+</div>
+<script type="text/javascript">
+function getProducto(){
+	  $.ajax({
+	    type: "GET",
+	    url: 'http://localhost:8082/producto', 
+	    dataType: "json",
+	    success: function(data){
+	    	console.log(data);
+	      $.each(data,function(key, registro) {
+	        $("#productoPrecio").append('<option value='+registro.id+'>'+registro.precio+' $ CLP'+'</option>');
+	        $("#productoNombre").append('<option value='+registro.id+'>'+registro.nombre+''+'</option>');
+	      });        
+	    },
+	    error: function(data) {
+	      alert('error');
+	    }
+	  });
+	}
+	
+function getCliente(){
+	  $.ajax({
+	    type: "GET",
+	    url: 'http://localhost:8082/cliente', 
+	    dataType: "json",
+	    success: function(data){
+	    	console.log(data);
+	    	
+	      $.each(data,function(key, registro) {
+	    
+	    	  $("#productoCliente").append('<option value='+registro.id+'>'+registro.nombre+' '+registro.apellido+'</option>');
+	      }); 
+	      
+	    },
+	    error: function(data) {
+	      alert('error');
+	    }
+	  });
+	}
+
+	
+	
+</script>
+  <!--Ajax-->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  
+    <!--jQuery 3.3.1 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!--Popper JS 1.14.3-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+    <!--Bootstrap JS 4.2.1-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
